@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chris Mayer",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
 }

@@ -1,8 +1,9 @@
 var express = require('express');
 var request = require('request');
+require('dotenv').config();
 
-var clientId = '203909835238.222348707590';
-var clientSecret = 'bccbfc8d0bdc335bbc2a7f9ccba7159f';
+var clientId = process.env.clientId //using dotenv npm app
+var clientSecret = process.env.clientSecret //using dotenv npm app
 
 // Instantiates Express and assigns our app variable to it
 var app = express();
@@ -34,7 +35,6 @@ app.get('/oauth', function(req, res) {
         console.log("Looks like we're not getting code.");
     } else {
         // If it's there...
-
         // We'll do a GET call to Slack's `oauth.access` endpoint, passing our app's client ID, 
         // client secret, and the code we just got as query parameters.
         request({
