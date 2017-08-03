@@ -6,7 +6,7 @@ const PORT = 4390;
 
 //Create function which handles any request and sends simple response
 function handleRequest (req, res){
-    res.end('ngrok is working - Path hit!! ' + req.url.toString() );
+    res.end('ngrok is working - Path hit!! ' + req.url );
     console.log(req.url);
 }
 
